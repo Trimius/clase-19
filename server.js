@@ -1,8 +1,6 @@
 const express = require('express');
 const app = express();
 
-function rootHander (req, res){
-    res.send('Hello World');
-}
-app.get('/', rootHander)
+app.use(express.static('public'))
+
 app.listen(9000)
